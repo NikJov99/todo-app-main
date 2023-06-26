@@ -1,0 +1,188 @@
+@import "_colors";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+// Josefin Sans, 400 & 700
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-image: url(../images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: $lightGrayishBlue;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto;
+  width: 90%;
+  color: white;
+  letter-spacing: 0.5rem;
+
+  #toggle-theme-button {
+    border: none;
+    background: transparent;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+span {
+  color: $darkGrayishBlue;
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+
+  section {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin: 2rem 0;
+    padding: 0 1rem;
+
+    form {
+      display: flex;
+      align-items: center;
+
+      #add-list-item-input {
+        border: none;
+        background: transparent;
+        height: 90%;
+        width: 90%;
+        padding: 1rem;
+        outline: none;
+      }
+    }
+  }
+
+  #todo-list-container {
+    padding: 0;
+
+    ul {
+      list-style: none;
+
+      .todo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px $lightGrayishBlue;
+        line-height: 3rem;
+        padding: 0 1rem;
+
+        span {
+          color: $veryDarkGrayishBlue;
+        }
+
+        button {
+          background-image: url(../images/icon-cross.svg);
+          background-repeat: no-repeat;
+          background-color: transparent;
+          height: 20px;
+          width: 20px;
+          border: none;
+          outline: none;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .items-left-optons {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  #toggle-available-todo-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+
+  #toggle-available-todo-items {
+    span {
+      color: $darkGrayishBlue;
+      font-weight: 700;
+      transition: 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: $brightBlue;
+      }
+    }
+  }
+}
+
+footer {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.completed-item {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+#clear-completed-items {
+  all: unset;
+  color: $darkGrayishBlue;
+  transition: 0.2s ease;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+    color: $brightBlue;
+  }
+}
+
+.add-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $brightBlue;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 2rem;
+  color: $veryLightGray;
+  transition: 0.25s ease;
+
+  &:hover {
+    background-color: $veryDarkGrayishBlue;
+    color: $veryLightGray;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

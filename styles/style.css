@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-image: url(../images/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(233, 11%, 84%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem auto;
+  width: 90%;
+  color: white;
+  letter-spacing: 0.5rem;
+}
+header #toggle-theme-button {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+header #toggle-theme-button:hover {
+  cursor: pointer;
+}
+
+span {
+  color: hsl(236, 9%, 61%);
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+}
+main section {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+main section form {
+  display: flex;
+  align-items: center;
+}
+main section form #add-list-item-input {
+  border: none;
+  background: transparent;
+  height: 90%;
+  width: 90%;
+  padding: 1rem;
+  outline: none;
+}
+main #todo-list-container {
+  padding: 0;
+}
+main #todo-list-container ul {
+  list-style: none;
+}
+main #todo-list-container ul .todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px hsl(233, 11%, 84%);
+  line-height: 3rem;
+  padding: 0 1rem;
+}
+main #todo-list-container ul .todo span {
+  color: hsl(235, 19%, 35%);
+}
+main #todo-list-container ul .todo button {
+  background-image: url(../images/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border: none;
+  outline: none;
+}
+main #todo-list-container ul .todo button:hover {
+  cursor: pointer;
+}
+main #todo-list-container .items-left-optons {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+main #toggle-available-todo-items {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+main #toggle-available-todo-items span {
+  color: hsl(236, 9%, 61%);
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+main #toggle-available-todo-items span:hover {
+  cursor: pointer;
+  color: hsl(220, 98%, 61%);
+}
+
+footer {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.completed-item {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+#clear-completed-items {
+  all: unset;
+  color: hsl(236, 9%, 61%);
+  transition: 0.2s ease;
+  font-weight: 700;
+}
+#clear-completed-items:hover {
+  cursor: pointer;
+  color: hsl(220, 98%, 61%);
+}
+
+.add-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(220, 98%, 61%);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 2rem;
+  color: hsl(0, 0%, 98%);
+  transition: 0.25s ease;
+}
+.add-button:hover {
+  background-color: hsl(235, 19%, 35%);
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-image: url(../images/bg-desktop-light.jpg);
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=style.css.map */

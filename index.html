@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Todo app</title>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>TODO</h1>
+        <button id="toggle-theme-button">
+          <img src="images/icon-moon.svg" alt="moon icon" />
+        </button>
+      </header>
+      <main>
+        <section id="input-section">
+          <form>
+            <input type="radio" name="" id="" />
+            <input
+              type="text"
+              id="add-list-item-input"
+              placeholder="Create a new todo..."
+            />
+            <button class="add-button">+</button>
+          </form>
+        </section>
+        <section id="todo-list-container">
+          <div class="todo-list">
+            <ul id="todo-list"></ul>
+          </div>
+          <div class="items-left-optons">
+            <span><span id="items-left-display">0</span> items left</span>
+            <button id="clear-completed-items">Clear completed</button>
+          </div>
+        </section>
+        <section id="toggle-available-todo-items">
+          <span id="show-all-todo-items">All</span>
+          <span id="show-active-todo-items">Active</span>
+          <span id="show-completed-todo-items">Completed</span>
+        </section>
+      </main>
+      <footer>
+        <span>Drag and drop to reorder list</span>
+      </footer>
+    </div>
+  </body>
+</html>
