@@ -14,6 +14,11 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: hsl(233, 11%, 84%);
+  transition: all 0.25s ease-in-out;
+}
+body.dark {
+  background-color: hsl(235, 21%, 11%);
+  background-image: url(../images/bg-mobile-dark.jpg);
 }
 
 header {
@@ -59,6 +64,9 @@ main section form #add-list-item-input {
   width: 90%;
   padding: 1rem;
   outline: none;
+}
+main section.dark {
+  background-color: hsl(235, 24%, 19%);
 }
 main #todo-list-container {
   padding: 0;
@@ -157,6 +165,10 @@ footer {
 @media only screen and (min-width: 900px) {
   body {
     background-image: url(../images/bg-desktop-light.jpg);
+  }
+  body.dark {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url(../images/bg-desktop-dark.jpg);
   }
   .container {
     max-width: 800px;

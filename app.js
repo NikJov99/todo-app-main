@@ -102,3 +102,23 @@ sortable.option("onStart", (event) => {
 sortable.option("onEnd", (event) => {
   event.item.classList.remove("dragging");
 });
+
+/* -------------------------- toggle theme -------------------------- */
+
+const toggleTheme = () => {
+  const themeIcon = document.querySelector("#theme-icon");
+  if (themeIcon.src.includes("icon-sun")) {
+    themeIcon.src = "images/icon-moon.svg";
+  } else {
+    themeIcon.src = "images/icon-sun.svg";
+  }
+
+  document.querySelector("body").classList.toggle("dark");
+
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    section.classList.toggle("dark");
+  });
+};
+
+toggleThemeButton.addEventListener("click", toggleTheme);

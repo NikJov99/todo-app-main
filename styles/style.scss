@@ -17,6 +17,12 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: $lightGrayishBlue;
+  transition: all 0.25s ease-in-out;
+
+  &.dark {
+    background-color: $veryDarkBlue;
+    background-image: url(../images/bg-mobile-dark.jpg);
+  }
 }
 
 header {
@@ -65,6 +71,10 @@ main {
         padding: 1rem;
         outline: none;
       }
+    }
+
+    &.dark {
+      background-color: $veryDarkDesaturatedBlue;
     }
   }
 
@@ -179,6 +189,11 @@ footer {
 @media only screen and (min-width: 900px) {
   body {
     background-image: url(../images/bg-desktop-light.jpg);
+
+    &.dark {
+      background-color: $veryDarkBlue;
+      background-image: url(../images/bg-desktop-dark.jpg);
+    }
   }
 
   .container {
